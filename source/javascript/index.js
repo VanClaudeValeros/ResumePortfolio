@@ -1,15 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // --- Scroll Progress Bar ---
+    const scrollProgress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const currentScroll = window.pageYOffset;
+        const scrollPercent = (currentScroll / totalScroll) * 100;
+        scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // --- Navbar Scroll Effect ---
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
     // --- Scroll Animations ---
     const scrollElements = document.querySelectorAll('.animate-on-scroll');
     const scrollObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                // Add a small delay for staggered appearance
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15 });
+    }, { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' 
+    });
 
     scrollElements.forEach(element => scrollObserver.observe(element));
 

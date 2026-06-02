@@ -4,45 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Van's Portfolio</title>
-    <link rel="stylesheet" href="/source/css/index.css">
+    <link rel="stylesheet" href="source/css/index.css">
 </head>
 <body>
+    <div class="scroll-progress-container">
+        <div id="scroll-progress" class="scroll-progress"></div>
+    </div>
+
+    <div class="bg-decor">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
     <nav class="navbar">
-        <div class="logo">Van's Portfolio</div>
-        <div class="nav-right">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Projects</a></li>
-                <li><a href="#contact">More Contacts</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
-                    <span id="theme-icon">🌙</span>
-                </button>
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+        <div class="nav-container">
+            <div class="logo">Van's Portfolio</div>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
     <section id="hero" class="hero animate-on-scroll">
         <div class="hero-content">
-            <h1>Hi, My name is Van Claude.</h1>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                Available for Internship
+            </div>
+            <h1>Hi, I'm Van Claude.</h1>
             <p>
-                I am a first-year Computer Science student passionate about
-                software development, web development, and game development.
-                Currently learning and building projects using Java, Python,
-                PHP, C++, and Godot while seeking volunteer internship
-                opportunities to gain real-world experience and contribute to
-                meaningful projects.
+                I am a first-year Computer Science student passionate about software development, web development, and game development, currently learning and building projects using Java, Python, PHP, C++, and Godot while seeking volunteer internship opportunities to gain real-world experience and contribute to meaningful projects.
             </p>
             <a href="#work" class="btn">View My Projects</a>
         </div>
         <div class="hero-image">
-            <img src="https://via.placeholder.com/400x500" alt="Profile Placeholder">
+            <img src="/source/img/257976029.jpg" alt="Profile Placeholder">
         </div>
     </section>
 
@@ -53,16 +66,7 @@
         <div class="about-grid">
             <div class="about-text">
                 <p>
-                    I am a first-year Computer Science student currently
-                    developing my skills in software and web development
-                    through academic and personal projects.
-                </p>
-                <p>
-                    I enjoy creating applications, exploring game development
-                    using Godot, and continuously improving my programming
-                    knowledge. I am currently seeking opportunities to learn,
-                    collaborate, and gain practical experience through
-                    volunteer internships and meaningful projects.
+                    As a first-year Computer Science student, I am dedicated to developing my skills in software and web development through academic and personal projects. I enjoy creating applications, exploring game development with Godot, and continuously improving my programming knowledge while seeking opportunities to collaborate and gain practical experience through impactful volunteer internships and meaningful projects.
                 </p>
             </div>
             <div class="about-skills">
@@ -85,48 +89,48 @@
             <h2>Projects Created</h2>
         </div>
         <div class="project-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="ZamboDorm Project">
+            <a href="https://github.com/VanClaudeValeros/ZamboDorm-Smart-Dormitory-Management-Platform.git">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>ZamboDorm</h3>
+                        <p>
+                            A web-based dormitory management platform designed to
+                            help users find dormitories more efficiently while
+                            improving the organization and accessibility of
+                            dorm-related information.
+                        </p>
+                        <h5>(Click the box to know more)</h5>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <h3>ZamboDorm</h3>
-                    <p>
-                        A web-based dormitory management platform designed to
-                        help users find dormitories more efficiently while
-                        improving the organization and accessibility of
-                        dorm-related information.
-                    </p>
+            </a>
+            <a href="https://github.com/VanClaudeValeros/OOP112Project_Game.git">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Texas Hold'em Poker</h3>
+                        <p>
+                            A Java-based Texas Hold'em Poker game inspired by the
+                            traditional poker game, allowing players to compete
+                            against one to three CPU opponents while applying game
+                            logic and object-oriented programming concepts.
+                        </p>
+                        <h5>(Click the box to know more)</h5>
+                    </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="Texas Hold'em Poker Project">
+            </a>
+            <a href="https://docs.google.com/document/d/1vt1shJiOzHeez4WJF9lPjEt36KrWEPu9/edit">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Project ICA</h3>
+                        <p>
+                            A web platform designed to improve attendance accuracy,
+                            event planning, and accessibility of club-related
+                            information while encouraging greater student
+                            participation and engagement in school activities.
+                        </p>
+                        <h5>(Click the box to know more)</h5>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <h3>Texas Hold'em Poker</h3>
-                    <p>
-                        A Java-based Texas Hold'em Poker game inspired by the
-                        traditional poker game, allowing players to compete
-                        against one to three CPU opponents while applying game
-                        logic and object-oriented programming concepts.
-                    </p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://via.placeholder.com/600x400" alt="Project ICA">
-                </div>
-                <div class="project-info">
-                    <h3>Project ICA</h3>
-                    <p>
-                        A web platform designed to improve attendance accuracy,
-                        event planning, and accessibility of club-related
-                        information while encouraging greater student
-                        participation and engagement in school activities.
-                    </p>
-                </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -143,9 +147,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Portfolio. All rights reserved to Van Claude C. Valeros.</p>
+        <p>&copy; 2026 Van Claude C. Valeros. All rights reserved.</p>
     </footer>
 
-    <script src="/source/javascript/index.js"></script>
+    <script src="source/javascript/index.js"></script>
 </body>
 </html>
