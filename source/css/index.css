@@ -34,6 +34,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -46,6 +47,7 @@ body {
     overflow-x: hidden;
     transition: background-color var(--transition-speed), color var(--transition-speed);
     position: relative;
+    width: 100%;
 }
 
 /* --- Scroll Progress Bar --- */
@@ -686,6 +688,11 @@ footer {
     
     .about-skills li {
         padding: 0.7rem 1rem;
+    }
+
+    .project-grid { grid-template-columns: 1fr; }
+}.project-grid { grid-template-columns: 1fr; }
+}rem;
     }
 
     .project-grid { grid-template-columns: 1fr; }
